@@ -1,0 +1,15 @@
+{
+  "name": "nft-from-scratch",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "pablo",
+  "license": "MIT",
+  "scripts": {
+    "compile": "brownie compile",
+    "deploy": "brownie run scripts/advanced_collectible/deploy_advanced.py --network rinkeby",
+    "fund": "brownie run scripts/advanced_collectible/fund_collectible.py --network rinkeby",
+    "create-collectible": "brownie run scripts/advanced_collectible/create_collectible.py --network rinkeby",
+    "create-metadata": "brownie run scripts/advanced_collectible/create_metadata.py --network rinkeby",
+    "set-tokenuri": "brownie run scripts/advanced_collectible/set_tokenuri.py --network rinkeby"
+  }
+}
