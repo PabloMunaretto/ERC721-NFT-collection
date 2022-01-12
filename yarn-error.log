@@ -1,0 +1,50 @@
+Arguments: 
+  /snap/node/5770/bin/node /usr/local/bin/yarn global dir --json
+
+PATH: 
+  /home/pablo/.local/bin/:/home/pablo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  16.13.2
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: EACCES: permission denied, write
+      at writeSync (node:fs:884:3)
+      at SyncWriteStream._write (node:internal/fs/sync_write_stream:25:3)
+      at writeOrBuffer (node:internal/streams/writable:389:12)
+      at _write (node:internal/streams/writable:330:10)
+      at SyncWriteStream.Writable.write (node:internal/streams/writable:334:10)
+      at JSONReporter._dump (/usr/local/lib/node_modules/yarn/lib/cli.js:49950:12)
+      at JSONReporter.log (/usr/local/lib/node_modules/yarn/lib/cli.js:49978:10)
+      at dir (/usr/local/lib/node_modules/yarn/lib/cli.js:36299:14)
+      at Object.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:25983:25)
+      at Generator.next (<anonymous>)
+
+npm manifest: 
+  {
+    "name": "nft-from-scratch",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "pablo",
+    "license": "MIT",
+    "scripts": {
+      "compile": "brownie compile",
+      "deploy": "brownie run scripts/advanced_collectible/deploy_advanced.py --network rinkeby",
+      "fund": "brownie run scripts/advanced_collectible/fund_collectible.py --network rinkeby",
+      "create-collectible": "brownie run scripts/advanced_collectible/create_collectible.py --network rinkeby",
+      "create-metadata": "brownie run scripts/advanced_collectible/create_metadata.py --network rinkeby",
+      "set-tokenuri": "brownie run scripts/advanced_collectible/set_tokenuri.py --network rinkeby"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
